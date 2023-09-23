@@ -1,8 +1,14 @@
 # ELK_Stack (logging)
 Elastic search, Log stash, Kibana 
 
-App server 의 log file 을 Beat 로 저장 후 elastic search 에 stack. stack 된 data 를 kibina 에서 확인 or dashboard
+1. server 의 log file 을 Beat 로 저장
 
-관련 내용들을 정리합니다.
+2. elastic search 에 stack
+
+3. stack 된 data 를 kibina 에서 확인 or dashboard
+
+관련 내용들을 정리합니다. 
+
+docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-elk 에서 클론하시고 내용을 보며 설치하시면 됩니다.
 
 ![스크린샷 2023-09-23 15-03-54](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/36a4964c-b2e0-462f-b60b-c6ba182a28af)
