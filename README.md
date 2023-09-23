@@ -12,6 +12,6 @@ Elastic search, Log stash, Kibana
 
 관련 내용들을 정리합니다. 
 
-docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-elk 에서 클론하시고 내용을 보며 설치하시면 됩니다.
+docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-elk 에서 클론하고 내용을 보며 설치.
 
 ![스크린샷 2023-09-23 15-03-54](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/36a4964c-b2e0-462f-b60b-c6ba182a28af)
