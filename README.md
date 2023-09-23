@@ -1,4 +1,3 @@
 # ELK_Stack
-log file 을 인덱싱 후 샤딩
 
-kibana 로 확인
+![스크린샷 2023-09-23 15-03-54](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/36a4964c-b2e0-462f-b60b-c6ba182a28af)
