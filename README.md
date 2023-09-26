@@ -20,3 +20,11 @@ docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-
 ENV 추가 후 Authorization ApiKey ~ 추가.
 basedir 설정 후 원하는 요청 listup
 swagger.json 으로 load 가능
+
+# Django REST API (게시판) 개발 
+2023 / 09 / 26 ~ 09 / 30 (Docker : Zookeeper, kafka(confluent), kafdrop, ELK Stack)
+workflow : server log 를 Queue(kafka with zookeeper) -> logstash(indexing)[logstash.conf] -> elasticsearch -> kibana (dashboard)
+만약 서버가 커졌을 경우 logstash 로 보내는 logfile 들이 많아져 과부화 발생. 
+해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장.
+날짜별 event log 를 NoSQL(MongoDB) 에 적재 -> 스키마를 재정의 후 DW 에 load
+
