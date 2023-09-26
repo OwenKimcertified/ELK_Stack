@@ -4,7 +4,6 @@ Elastic search, Log stash, Kibana
 1. server 의 log file 을 Beat 로 저장
 
 2. server 의 log 관련 config 가 변경되었을 때 각 서버에 ssh 접속으로 하나하나 config 를 수정하지 않고 log stash 로 파싱 
-  - server 가 매우 많다면 ES 에 stack 하기 전 Kafka 를 추가해 Kafka 먼저 보내 부하를 줄임 and HA 를 가능하게 하기
 
 3. elastic search 에 stack
 
