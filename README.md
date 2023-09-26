@@ -22,7 +22,9 @@ basedir 설정 후 원하는 요청 listup
 swagger.json 으로 load 가능
 
 # Django REST API (게시판) 개발 
-2023 / 09 / 26 ~ 09 / 30 (Docker : Zookeeper, kafka(confluent), kafdrop, ELK Stack)
+2023 / 09 / 26 ~ 09 / 30 
+
+Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack] 이미지 경량화하기.
 
 workflow : server log 를 Queue(kafka with zookeeper) -> logstash(indexing)[logstash.conf] -> elasticsearch -> kibana (dashboard)
 
