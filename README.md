@@ -36,3 +36,9 @@ workflow : server log 를 Queue(kafka with zookeeper) -> logstash(indexing)[logs
 
 날짜별 event log 를 NoSQL(MongoDB) 에 적재 -> 스키마를 재정의 후 DW 에 load
 
+### ISSUE LIST
+
+makemigrations 시 권한 오류 해결 (ubuntu 에서 git clone 시 잠김 폴더로 된 경우,chmod -R +w 로 해결 안됨)
+ㄴ sudo <which python 으로 출력된 path> manage.py makemigrations 
+
+
