@@ -38,7 +38,9 @@ __workflow__
 
 4. kibana (dashboard) 로 확인
 
-만약 서버가 커져서 트래픽이 많아지고 서버를 늘림과 동시에 logstash 로 보내는 logfile 들이 많아져 과부화 발생. n * server = (n+@) logs
+만약 서버가 커져서 트래픽이 많아지고 서버를 늘림과 동시에 logstash 로 보내는 logfile 들이 많아져 과부화 발생.
+
+ㄴ n * server = n * log
 
 Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리 하기 어려워짐. (ssh login 으로 하나하나 확인해야함)
 
