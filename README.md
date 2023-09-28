@@ -23,8 +23,8 @@ basedir 설정 후 원하는 요청 listup
 
 swagger.json 으로 load 가능
 
-# Django REST API (게시판) 개발 
->>(기능 구현 끝난 후 spring boot 로 변경 예정) 
+# Django REST API (게시판) 개발 ㅅ
+>(기능 구현 끝난 후 spring boot 로 변경 예정) 
 
 Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
@@ -38,9 +38,11 @@ __workflow__
 
 4. kibana (dashboard) 로 확인
 
-만약 서버가 커졌을 경우 logstash 로 보내는 logfile 들이 많아져 과부화 발생. n * server = (n+@) logs
+만약 서버가 커져서 트래픽이 많아지고 서버를 늘림과 동시에 logstash 로 보내는 logfile 들이 많아져 과부화 발생. n * server = (n+@) logs
 
-해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장.
+Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리 하기 어려워짐. (ssh login 으로 하나하나 확인해야함)
+
+해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장. kafka 에 서버별 토픽을 분리시키고 메세지를 logstash 로 일괄 관리.
 
 날짜별 event log 를 NoSQL(MongoDB) 에 적재 -> 스키마를 재정의 후 DW 에 load
 
@@ -50,7 +52,9 @@ makemigrations 시 권한 오류 해결 (ubuntu 에서 git clone 시 잠김 폴�
 
 ㄴ sudo <which python 으로 출력된 path> manage.py makemigrations 
 
+Settings.py 파일에 LOGGING config 작성
 
+ㄴ Kafka 에 관련된 config 작성했음에도 작동되지 않았음. view 파일에 logging 을 하거나 다른 방법이 있을 듯. (문제 해결 중)
 # Schedule
 
 2023 / 09 / 26 ~ 09 / 30
