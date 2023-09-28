@@ -55,6 +55,21 @@ makemigrations 시 권한 오류 해결 (ubuntu 에서 git clone 시 잠김 폴�
 Settings.py 파일에 LOGGING config 작성
 
 ㄴ Kafka 에 관련된 config 작성했음에도 작동되지 않았음. view 파일에 logging 을 하거나 다른 방법이 있을 듯. (문제 해결 중)
+
+ㄴ Django settings.py 에 Logging 관련 config 로 handler 에 kafka 와 관련된 것을 넣어도 오류는 나지 않았음
+
+```python
+(bigdata) owen@happy:~/ELK_Stack/dj4ngo$ python manage.py runserver 1234
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+```
+
+에서 멈추고 더 이상 진행되지 않았음 -> 호환되지 않음
+
+ㄴ view 파일에 하나하나 json schema 로 logging 하기로 결정함 (spring 으로 빨리 넘어가자)
+
 # Schedule
 
 2023 / 09 / 26 ~ 09 / 30
