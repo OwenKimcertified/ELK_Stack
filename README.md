@@ -23,7 +23,7 @@ basedir 설정 후 원하는 요청 listup
 
 swagger.json 으로 load 가능
 
-# Django REST API (게시판) 개발 ㅅ
+# Django REST API (게시판) 개발 
 >(기능 구현 끝난 후 spring boot 로 변경 예정) 
 
 Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
