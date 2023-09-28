@@ -56,6 +56,8 @@ makemigrations 시 권한 오류 해결 (ubuntu 에서 git clone 시 잠김 폴�
 
 2023 / 09 / 26 ~ 09 / 30
 
-django restapi 기능 구현 (basic, logging)
+django restAPI 기능 구현 (basic, logging)
+
+~~ELK docker image 경량화~~
 
 kafka - server log connection, Zookeeper Failover test 
