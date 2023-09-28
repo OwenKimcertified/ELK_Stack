@@ -16,21 +16,30 @@ docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-
 ![스크린샷 2023-09-23 15-03-54](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/36a4964c-b2e0-462f-b60b-c6ba182a28af)
 
 # Postman (api check)
+
 ENV 추가 후 Authorization ApiKey ~ 추가.
+
 basedir 설정 후 원하는 요청 listup
+
 swagger.json 으로 load 가능
 
 # Django REST API (게시판) 개발 
 
-(기능 구현 끝난 후 spring boot 로 변경 예정)
-
-2023 / 09 / 26 ~ 09 / 30 
+(기능 구현 끝난 후 spring boot 로 변경 예정) 
 
 Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack] 이미지 경량화하기.
 
-workflow : server log 를 Queue(kafka with zookeeper) -> logstash(indexing)[logstash.conf] -> elasticsearch -> kibana (dashboard)
+__workflow__ 
 
-만약 서버가 커졌을 경우 logstash 로 보내는 logfile 들이 많아져 과부화 발생. 
+1. server log 를 Queue(kafka with zookeeper)
+
+2. kafka 에 저장된 message를 logstash(indexing)[logstash.conf] 로
+
+3. logstash -> elasticsearch 에 stack
+
+4. kibana (dashboard) 로 확인
+
+만약 서버가 커졌을 경우 logstash 로 보내는 logfile 들이 많아져 과부화 발생. n * server = (n+@) logs
 
 해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장.
 
@@ -39,6 +48,14 @@ workflow : server log 를 Queue(kafka with zookeeper) -> logstash(indexing)[logs
 ### ISSUE LIST
 
 makemigrations 시 권한 오류 해결 (ubuntu 에서 git clone 시 잠김 폴더로 된 경우,chmod -R +w 로 해결 안됨)
+
 ㄴ sudo <which python 으로 출력된 path> manage.py makemigrations 
 
 
+# Schedule
+
+2023 / 09 / 26 ~ 09 / 30
+
+django restapi 기능 구현 (basic, logging)
+
+kafka - server log connection, Zookeeper Failover test 
