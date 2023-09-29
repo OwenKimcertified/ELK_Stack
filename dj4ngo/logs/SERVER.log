@@ -1,0 +1,52 @@
+2023-09-29 23:54:13,370 [INFO] django.utils.autoreload: Watching for file changes with StatReloader
+2023-09-29 23:54:16,279 [INFO] django.server: [m"GET / HTTP/1.1" 200 8626[0m
+2023-09-29 23:54:16,297 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:19,115 [INFO] django.server: [32m"GET /common/logout/ HTTP/1.1" 302 0[0m
+2023-09-29 23:54:19,144 [INFO] django.server: [m"GET / HTTP/1.1" 200 8716[0m
+2023-09-29 23:54:19,211 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:20,068 [INFO] django.server: [m"GET /common/signup/ HTTP/1.1" 200 3029[0m
+2023-09-29 23:54:20,096 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:38,366 [DEBUG] server_log: {'log_level': 'info', 'category': 'signup', 'time': '2023-09-29 23:54', 'method': 'POST', 'username': 'owen11', 'email': '11@22.33', 'status': 'Success'}
+2023-09-29 23:54:38,381 [INFO] django.server: [32m"POST /common/signup/ HTTP/1.1" 302 0[0m
+2023-09-29 23:54:38,411 [INFO] django.server: [m"GET / HTTP/1.1" 200 8628[0m
+2023-09-29 23:54:38,476 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:40,811 [DEBUG] server_log: {"log_level": "INFO", "category": "Q_create", "method": "POST", "time": "2023-09-29 23:54", "user_id": 16, "status": "Success"}
+2023-09-29 23:54:41,091 [INFO] django.server: [m"GET /pybo/question/create/ HTTP/1.1" 200 2576[0m
+2023-09-29 23:54:41,116 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:45,808 [INFO] django.server: [32m"POST /pybo/question/create/ HTTP/1.1" 302 0[0m
+2023-09-29 23:54:45,844 [INFO] django.server: [m"GET /pybo/ HTTP/1.1" 200 8629[0m
+2023-09-29 23:54:45,909 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:47,241 [INFO] django.server: [m"GET /pybo/15/ HTTP/1.1" 200 4015[0m
+2023-09-29 23:54:47,266 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:49,346 [DEBUG] server_log: {"log_level": "INFO", "category": "A_create", "method": "POST", "time": "2023-09-29 23:54", "user_id": 16, "answer_id": 9, "status": "Success"}
+2023-09-29 23:54:49,523 [INFO] django.server: [32m"POST /pybo/answer/create/15/ HTTP/1.1" 302 0[0m
+2023-09-29 23:54:49,553 [INFO] django.server: [m"GET /pybo/15/ HTTP/1.1" 200 5070[0m
+2023-09-29 23:54:49,626 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:53,165 [INFO] django.server: [m"GET /pybo/answer/modify/9/ HTTP/1.1" 200 2327[0m
+2023-09-29 23:54:53,190 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:54:56,774 [DEBUG] server_log: {"log_level": "INFO", "category": "A_modify", "method": "POST", "time": "2023-09-29 23:54", "user_id": 16, "answer_id": 9, "status": "Success"}
+2023-09-29 23:54:56,780 [INFO] django.server: [32m"POST /pybo/answer/modify/9/ HTTP/1.1" 302 0[0m
+2023-09-29 23:54:56,809 [INFO] django.server: [m"GET /pybo/15/ HTTP/1.1" 200 5309[0m
+2023-09-29 23:54:56,880 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:55:01,693 [DEBUG] server_log: {"log_level": "INFO", "category": "A_delete", "method": "POST", "time": "2023-09-29 23:54", "user_id": 16, "answer_id": null, "status": "Success"}
+2023-09-29 23:55:01,699 [INFO] django.server: [32m"GET /pybo/answer/delete/9/ HTTP/1.1" 302 0[0m
+2023-09-29 23:55:01,717 [INFO] django.server: [m"GET /pybo/15/ HTTP/1.1" 200 4015[0m
+2023-09-29 23:55:01,785 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:55:03,382 [INFO] django.server: [m"GET /pybo/ HTTP/1.1" 200 8629[0m
+2023-09-29 23:55:03,400 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:55:04,365 [INFO] django.server: [32m"GET /common/logout/ HTTP/1.1" 302 0[0m
+2023-09-29 23:55:04,398 [INFO] django.server: [m"GET / HTTP/1.1" 200 8717[0m
+2023-09-29 23:55:04,461 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:55:05,551 [INFO] django.server: [m"GET /common/login/ HTTP/1.1" 200 2697[0m
+2023-09-29 23:55:05,570 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:55:09,346 [INFO] django.server: [32m"POST /common/login/ HTTP/1.1" 302 0[0m
+2023-09-29 23:55:09,377 [INFO] django.server: [m"GET / HTTP/1.1" 200 8627[0m
+2023-09-29 23:55:09,444 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:55:10,564 [INFO] django.server: [m"GET /pybo/14/ HTTP/1.1" 200 4013[0m
+2023-09-29 23:55:10,584 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:55:14,968 [DEBUG] server_log: {"log_level": "INFO", "category": "Q_vote", "method": "POST", "time": "2023-09-29 23:54", "voter": 1, "question_id": 14, "status": "Success"}
+2023-09-29 23:55:14,974 [INFO] django.server: [32m"GET /pybo/question/vote/14/ HTTP/1.1" 302 0[0m
+2023-09-29 23:55:14,994 [INFO] django.server: [m"GET /pybo/14/ HTTP/1.1" 200 4013[0m
+2023-09-29 23:55:15,061 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
+2023-09-29 23:55:16,496 [INFO] django.server: [m"GET /pybo/ HTTP/1.1" 200 8627[0m
+2023-09-29 23:55:16,517 [WARNING] django.server: [33m"GET /static/style.css HTTP/1.1" 404 1786[0m
