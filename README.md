@@ -135,3 +135,7 @@ To https://github.com/OwenKimcertified/ELK_Stack.git
 - [X] Server log - Kafka connection, Zookeeper Failover test 
 
 <mark>Kafka(server log) - Logstash server log 인덱싱</mark>
+
+![스크린샷 2023-09-30 00-29-15](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/6023ef98-4b49-4a15-8872-9636b35b68d5)
+
+kafka broker 의 status, topic 별 message 를 GUI로 확인.
