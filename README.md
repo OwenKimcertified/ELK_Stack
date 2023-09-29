@@ -3,11 +3,12 @@ Elastic search, Log stash, Kibana
 
 1. server 의 log file 을 Beat 로 저장
 
-2. server 의 log 관련 config 가 변경되었을 때 각 서버에 ssh 접속: 각 config 들을 수정하지 않고 log stash 로 파싱 
+2. server 의 log 관련 config 가 변경되었을 때 각 서버에 ssh 접속
+    각 config 들을 수정하지 않고 log stash 로 파싱 
 
-3. elastic search 에 stack
+4. elastic search 에 stack
 
-4. stack 된 data 를 kibina 에서 확인 or dashboard
+5. stack 된 data 를 kibina 에서 확인 or dashboard
 
 관련 내용들을 정리합니다. 
 
