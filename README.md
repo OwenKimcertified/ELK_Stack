@@ -44,7 +44,11 @@ __workflow__
 
 Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리 하기 어려워짐. (ssh login 으로 하나하나 확인해야함)
 
-해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장. kafka 에 서버별 토픽을 분리시키고 메세지를 logstash 로 일괄 관리.
+해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장.
+
+kafka 에 SERVER LOG 들을 구분하고 해당하는 topic 들을 생성. 
+
+서버가 늘어나도 SERVER.log 는 logstash 로 일괄 관리.
 
 날짜별 event log 를 NoSQL(MongoDB) 에 적재 -> 스키마를 재정의 후 DW 에 load
 
