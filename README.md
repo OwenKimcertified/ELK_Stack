@@ -52,7 +52,7 @@ Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리 �
 
 1. makemigrations 시 권한 오류 해결 (ubuntu 에서 git clone 시 잠김 폴더로 된 경우,chmod -R +w 로 해결 안됨)
 
-ㄴ sudo <which python 으로 출력된 path> manage.py makemigrations 
+> sudo <which python 으로 출력된 path> manage.py makemigrations 
 
 Settings.py 파일에 LOGGING config 작성
 
