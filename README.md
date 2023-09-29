@@ -80,6 +80,6 @@ System check identified no issues (0 silenced).
 
 - [X] django restAPI 기능 구현 (basic, logging) 
 
-- [X] Kafka - server log connection, Zookeeper Failover test 
+- [X] Server log - Kafka connection, Zookeeper Failover test 
 
 <mark>Kafka(server log) - Logstash server log 인덱싱</mark>
