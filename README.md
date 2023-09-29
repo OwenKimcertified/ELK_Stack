@@ -78,8 +78,8 @@ System check identified no issues (0 silenced).
 
 ~~ELK docker image 경량화~~
 
-django restAPI 기능 구현 (basic, logging)
+- [X] django restAPI 기능 구현 (basic, logging) 
 
-Kafka - server log connection, Zookeeper Failover test 
+- [X] Kafka - server log connection, Zookeeper Failover test 
 
 <mark>Kafka(server log) - Logstash server log 인덱싱</mark>
