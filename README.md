@@ -72,6 +72,58 @@ System check identified no issues (0 silenced).
 
 ㄴ view 파일에 하나하나 json schema 로 logging 하기로 결정함 (spring 으로 빨리 넘어가자)
 
+커밋 전 git pull 시 오류
+
+로컬 브랜치와 원격 브랜치가 충돌해서 발생.
+
+```python
+(bigdata) owen@happy:~/ELK_Stack/dj4ngo$ git pull origin main
+remote: Enumerating objects: 20, done.
+remote: Counting objects: 100% (20/20), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 18 (delta 6), reused 0 (delta 0), pack-reused 0
+오브젝트 묶음 푸는 중: 100% (18/18), 4.91 KiB | 1.23 MiB/s, 완료.
+https://github.com/OwenKimcertified/ELK_Stack URL에서
+ * branch            main       -> FETCH_HEAD
+   a95e3f9..e754872  main       -> origin/main
+힌트: You have divergent branches and need to specify how to reconcile them.
+힌트: You can do so by running one of the following commands sometime before
+힌트: your next pull:
+힌트: 
+힌트:   git config pull.rebase false  # merge (the default strategy)
+힌트:   git config pull.rebase true   # rebase
+힌트:   git config pull.ff only       # fast-forward only
+힌트: 
+힌트: You can replace "git config" with "git config --global" to set a default
+힌트: preference for all repositories. You can also pass --rebase, --no-rebase,
+힌트: or --ff-only on the command line to override the configured default per
+힌트: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+```
+
+위와 같은 오류 발생. 
+
+ㄴ <mark>로컬 브랜치의 커밋을 원격 브랜치 위로 다시 적용하여 히스토리를 정리하고 선형으로 유지.</mark>
+```python
+(bigdata) owen@happy:~/ELK_Stack/dj4ngo$ git pull --rebase origin main
+https://github.com/OwenKimcertified/ELK_Stack URL에서
+ * branch            main       -> FETCH_HEAD
+Successfully rebased and updated refs/heads/main.
+
+이후 git push 
+
+bigdata) owen@happy:~/ELK_Stack/dj4ngo$ git push origin main
+오브젝트 나열하는 중: 76, 완료.
+오브젝트 개수 세는 중: 100% (76/76), 완료.
+Delta compression using up to 12 threads
+오브젝트 압축하는 중: 100% (53/53), 완료.
+오브젝트 쓰는 중: 100% (54/54), 22.02 KiB | 4.40 MiB/s, 완료.
+Total 54 (delta 16), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (16/16), completed with 7 local objects.
+To https://github.com/OwenKimcertified/ELK_Stack.git
+   e754872..e3d782f  main -> main
+```
+
 # Schedule
 
 2023 / 09 / 26 ~ 09 / 30
