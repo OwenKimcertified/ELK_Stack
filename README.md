@@ -129,6 +129,19 @@ remote: Resolving deltas: 100% (16/16), completed with 7 local objects.
 To https://github.com/OwenKimcertified/ELK_Stack.git
    e754872..e3d782f  main -> main
 ```
+3. docker 에서 elk, kafka 연동 시 네트워크 통신 문제 ★
+
+만약 kafka 에 해당하는 docker-compose.yml 파일을 compose up 하고
+
+ELK 에 해당하는 docker-compose.yml 파일을 compose up 했다면 
+
+도커의 컨테이너는 기본적으로 격리되어 있어 서로 통신할 수 없다. 
+
+따라서 새로운 네트워크를 생성하고 통신시킬 컨테이너들을 모아야한다. 
+
+docker network connect <network-name> <img_id>
+
+이게 싫으면 한 개의 docker-compose.yml 에 모아서 compose up 해도 되지만 권장하지 않음.
 
 # Schedule
 
@@ -140,9 +153,8 @@ To https://github.com/OwenKimcertified/ELK_Stack.git
 
 - [X] Server log - Kafka connection, Zookeeper Failover test 
 
-<mark>Kafka(server log) - Logstash server log 인덱싱</mark>
+- [X] <mark>Kafka(server log) - Logstash server log 연동 </mark>
 
-ㄴ 해결 중.. 기간 연장
 
 ![스크린샷 2023-09-30 00-29-15](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/6023ef98-4b49-4a15-8872-9636b35b68d5)
 
