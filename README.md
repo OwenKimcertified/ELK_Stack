@@ -154,6 +154,8 @@ docker network connect <network-name> <img_id>
 - [X] Server log - Kafka connection, Zookeeper Failover test 
 
 - [X] <mark>Kafka(server log) - Logstash server log 연동 </mark>
+
+- [ ] 로깅 파일 indecies 하고 대시보드화
 ```python
 docker-elk-main-logstash-1       | [2023-09-30T15:55:30,330][INFO ][org.apache.kafka.clients.consumer.KafkaConsumer][main][0fd99696a92c968bccc1713a676feaca61f52661b8896582adbf98c1fe4f8371] [Consumer clientId=logstash-0, groupId=logstash] Subscribed to topic(s): django_SERVER_LOGS_create_account, django_SERVER_LOGS_question, django_SERVER_LOGS_answer
 
@@ -170,4 +172,3 @@ docker-elk-main-logstash-1       | [2023-09-30T16:11:49,168][ERROR][logstash.cod
 kafka broker 의 status, topic 별 message 를 GUI로 확인.
 ![스크린샷 2023-09-30 00-29-15](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/6023ef98-4b49-4a15-8872-9636b35b68d5)
 
-- [] 로깅 파일 indecies 하고 대시보드화
