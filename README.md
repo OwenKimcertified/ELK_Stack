@@ -145,7 +145,7 @@ docker network connect <network-name> <img_id>
 
 # Schedule
 
-2023 / 09 / 26 ~ 09 / 30
+2023 / 09 / 26 ~ 09 / 30 < 연장 10 / 02 >
 
 ~~ELK docker image 경량화~~
 
