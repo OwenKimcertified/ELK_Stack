@@ -23,6 +23,52 @@ docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-
 
 ### ELK 를 활용해 kafka 에서 Server 의 Event stream log 를 가져오고 처리 / 분석 / 저장.
 
+# Schedule
+
+## 2023 / 09 / 26 ~ 10 / 02
+
+~~ELK docker image 경량화~~
+
+- [X] django restAPI 기능 구현 (basic, logging) 
+
+- [X] Server log - Kafka connection, Zookeeper Failover test 
+
+kafka broker 의 status, topic 별 message 를 GUI로 확인.
+![스크린샷 2023-09-30 00-29-15](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/6023ef98-4b49-4a15-8872-9636b35b68d5)
+
+- [X] <mark>Kafka(server log) - Logstash server log 연동 </mark>
+
+```python
+docker-elk-main-logstash-1       | [2023-09-30T15:55:30,330][INFO ][org.apache.kafka.clients.consumer.KafkaConsumer][main][0fd99696a92c968bccc1713a676feaca61f52661b8896582adbf98c1fe4f8371] [Consumer clientId=logstash-0, groupId=logstash] Subscribed to topic(s): django_SERVER_LOGS_create_account, django_SERVER_LOGS_question, django_SERVER_LOGS_answer
+
+.....
+
+docker-elk-main-logstash-1       | [2023-09-30T16:11:49,168][ERROR][logstash.codecs.json     ][main][62abd92972a6d191c6edf0d14a8a960c3ec54c02effff72cbc49d8ddd8863036] JSON parse error, original data now in message field {:message=>"incompatible json object type=java.lang.String , only hash map or arrays are supported", :exception=>LogStash::Json::ParserError, :data=>"\"{\\\"log_level\\\": \\\"INFO\\\", \\\"category\\\": \\\"Q_create\\\", \\\"method\\\": \\\"POST\\\", \\\"time\\\": \\\"2023-10-01 01:11\\\", \\\"user_id\\\": 19, \\\"status\\\": \\\"Success\\\"}\""}
+
+```
+
+ㄴ 연동 확인. 일부로 타입 오류 내고 로그 확인.
+![스크린샷 2023-10-01 00-37-08](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/820eb38d-7e9a-4b6b-863a-cf229c813c19)
+
+- [X] index mapping
+
+kafka 에서 받아온 message 를 index mapping 
+![스크린샷 2023-10-02 02-13-00](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/02f53511-1099-4550-ac8f-84cda138a8b8)
+
+대시보드화 가능. 
+
+logstash 파이프라인을 통해 처리된 Event stream 은 ES 로 가기 전 샤딩.
+
+Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 활용해 분산 / 병렬 처리함.
+
+ㄴ 검색, 분석 성능 강화. 서버가 커지면 ES config 를 수정해서 클러스터 구성을 조절하기.
+
+## 2023 / 10 / 02 ~ 10 / 03
+
+- [ ] NoSQL (mongoDB) 에 log stack. ( airflow 로 scheduling) 
+
+- [ ] 할 일 탐색 중
+
 # Postman (api check)
 
 ENV 추가 후 Authorization ApiKey ~ 추가.
@@ -156,49 +202,4 @@ not eligible, 401(authorization) ... etc
 공식 문서를 활용  
 ### [ELK stack 공식문서](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html)
 
-# Schedule
 
-2023 / 09 / 26 ~ 09 / 30 < 연장 10 / 02 >
-
-~~ELK docker image 경량화~~
-
-- [X] django restAPI 기능 구현 (basic, logging) 
-
-- [X] Server log - Kafka connection, Zookeeper Failover test 
-
-- [X] <mark>Kafka(server log) - Logstash server log 연동 </mark>
-
-- [X] index mapping
-
-2023 / 10 / 02 ~ 10 / 03
-
-- [ ] NoSQL (mongoDB) 에 log stack. ( airflow 로 scheduling) 
-
-- [ ] 할 일 탐색 중
-```python
-docker-elk-main-logstash-1       | [2023-09-30T15:55:30,330][INFO ][org.apache.kafka.clients.consumer.KafkaConsumer][main][0fd99696a92c968bccc1713a676feaca61f52661b8896582adbf98c1fe4f8371] [Consumer clientId=logstash-0, groupId=logstash] Subscribed to topic(s): django_SERVER_LOGS_create_account, django_SERVER_LOGS_question, django_SERVER_LOGS_answer
-
-.....
-
-docker-elk-main-logstash-1       | [2023-09-30T16:11:49,168][ERROR][logstash.codecs.json     ][main][62abd92972a6d191c6edf0d14a8a960c3ec54c02effff72cbc49d8ddd8863036] JSON parse error, original data now in message field {:message=>"incompatible json object type=java.lang.String , only hash map or arrays are supported", :exception=>LogStash::Json::ParserError, :data=>"\"{\\\"log_level\\\": \\\"INFO\\\", \\\"category\\\": \\\"Q_create\\\", \\\"method\\\": \\\"POST\\\", \\\"time\\\": \\\"2023-10-01 01:11\\\", \\\"user_id\\\": 19, \\\"status\\\": \\\"Success\\\"}\""}
-
-```
-
-ㄴ 연동은 되고 있음. 일부로 타입 오류 내고 로그 확인.
-![스크린샷 2023-10-01 00-37-08](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/820eb38d-7e9a-4b6b-863a-cf229c813c19)
-
-
-kafka broker 의 status, topic 별 message 를 GUI로 확인.
-![스크린샷 2023-09-30 00-29-15](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/6023ef98-4b49-4a15-8872-9636b35b68d5)
-
-
-kafka 에서 받아온 message 를 indecies 
-![스크린샷 2023-10-02 02-13-00](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/02f53511-1099-4550-ac8f-84cda138a8b8)
-
-대시보드화 가능. 
-
-logstash 파이프라인을 통해 처리된 Event stream 은 ES 로 가기 전 샤딩.
-
-Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 활용해 분산 / 병렬 처리함.
-
-ㄴ 검색, 분석 성능 강화. 서버가 커지면 ES config 를 수정해서 클러스터 구성을 조절하기.
