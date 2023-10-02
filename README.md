@@ -191,4 +191,8 @@ kafka 에서 받아온 message 를 indecies
 
 대시보드화 가능. 
 
-curl 로 인덱스 만들고 매핑 하고 conf 설정
+logstash 파이프라인을 통해 처리된 Event stream 은 ES 로 가기 전 샤딩.
+
+Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 활용해 분산 / 병렬 처리함.
+
+ㄴ 검색, 분석 성능 강화. 서버가 커지면 ES config 를 수정해서 클러스터 구성을 조절하기.
