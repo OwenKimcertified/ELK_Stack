@@ -87,24 +87,14 @@ Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 
 
 ENV 추가 후 Authorization ApiKey ~ 추가.
 
-basedir 설정 후 원하는 요청 listup
+basedir 설정 후 원하는 요청 listup.
 
-swagger.json 으로 load 가능
+swagger.json 으로 load 가능.
 
-# Django REST API 개발 (Web Server)
+### Django REST API 개발 (Web Server)
 >(기능 구현 끝난 후 spring boot 로 변경 예정) 
 
-Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
-
-__workflow__ 
-
-1. server log 를 Queue(kafka with zookeeper)
-
-2. kafka 에 저장된 message를 logstash index mapping
-
-3. kibana (dashboard) 로 확인
-
-4. 날짜별 event log 를 NoSQL(MongoDB) 에 적재 -> 스키마를 재정의 후 DW 에 load
+Web 구성은 basic 글,댓글 쓰기, 수정 삭제, 추천, 페이징
 
 # ISSUE LIST
 
