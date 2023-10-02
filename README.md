@@ -23,6 +23,20 @@ docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-
 
 ### ELK 를 활용해 kafka 에서 Server 의 Event stream log 를 가져오고 처리 / 분석 / 저장.
 
+# __workflow__ 
+
+Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
+
+ㄴ docker network connect 활용
+
+1. server log 를 Queue(kafka with zookeeper)
+
+2. kafka 에 저장된 message를 logstash index mapping
+
+3. kibana (dashboard) 로 확인
+
+4. 날짜별 event log 를 NoSQL(MongoDB) 에 stack -> 스키마를 재정의 후 DW 에 load
+
 # Schedule
 
 ## 2023 / 09 / 26 ~ 10 / 02
@@ -86,25 +100,11 @@ __workflow__
 
 1. server log 를 Queue(kafka with zookeeper)
 
-2. kafka 에 저장된 message를 logstash(인덱싱)[logstash.conf] 로
+2. kafka 에 저장된 message를 logstash index mapping
 
-3. logstash -> elasticsearch 에 stack
+3. kibana (dashboard) 로 확인
 
-4. kibana (dashboard) 로 확인
-
-만약 서버가 커져서 트래픽이 많아지고 서버를 늘림과 동시에 logstash 로 보내는 logfile 이 많아져 과부화 발생.
-
-ㄴ n * server = n * log
-
-Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리 하기 어려워짐. (ssh login 으로 하나하나 확인해야함)
-
-해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장.
-
-kafka 에 SERVER LOG 들을 구분하고 해당하는 topic 들을 생성. 
-
-서버가 늘어나도 SERVER.log 는 logstash 로 일괄 관리.
-
-날짜별 event log 를 NoSQL(MongoDB) 에 적재 -> 스키마를 재정의 후 DW 에 load
+4. 날짜별 event log 를 NoSQL(MongoDB) 에 적재 -> 스키마를 재정의 후 DW 에 load
 
 # ISSUE LIST
 
@@ -202,4 +202,16 @@ not eligible, 401(authorization) ... etc
 공식 문서를 활용  
 ### [ELK stack 공식문서](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html)
 
+5. Scale out 시 문제 
 
+만약 서버가 커져서 트래픽이 많아지고 서버를 늘림과 동시에 logstash 로 보내는 logfile 이 많아져 과부화 발생.
+
+ㄴ n * server = n * log
+
+Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리 하기 어려워짐. (ssh login 으로 하나하나 확인해야함)
+
+해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장.
+
+kafka 에 SERVER LOG 들을 구분하고 해당하는 topic 들을 생성. 
+
+서버가 늘어나도 SERVER.log 는 logstash 로 일괄 관리.
