@@ -168,7 +168,7 @@ not eligible, 401(authorization) ... etc
 
 - [ ] NoSQL (mongoDB) 에 log stack. ( airflow 로 scheduling) 
 
-- [ ] 
+- [ ] 할 일 탐색 중
 ```python
 docker-elk-main-logstash-1       | [2023-09-30T15:55:30,330][INFO ][org.apache.kafka.clients.consumer.KafkaConsumer][main][0fd99696a92c968bccc1713a676feaca61f52661b8896582adbf98c1fe4f8371] [Consumer clientId=logstash-0, groupId=logstash] Subscribed to topic(s): django_SERVER_LOGS_create_account, django_SERVER_LOGS_question, django_SERVER_LOGS_answer
 
