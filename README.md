@@ -77,7 +77,7 @@ basedir 설정 후 원하는 요청 listup
 
 swagger.json 으로 load 가능
 
-# Django REST API (게시판) 개발 
+# Django REST API 개발 (Web Server)
 >(기능 구현 끝난 후 spring boot 로 변경 예정) 
 
 Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
@@ -106,7 +106,7 @@ kafka 에 SERVER LOG 들을 구분하고 해당하는 topic 들을 생성.
 
 날짜별 event log 를 NoSQL(MongoDB) 에 적재 -> 스키마를 재정의 후 DW 에 load
 
-### ISSUE LIST
+# ISSUE LIST
 
 1. makemigrations 시 권한 오류 해결 (ubuntu 에서 git clone 시 잠김 폴더로 된 경우,chmod -R +w 로 해결 안됨)
 
