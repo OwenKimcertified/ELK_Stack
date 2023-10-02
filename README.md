@@ -17,6 +17,8 @@ docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-
 
 ![스크린샷 2023-09-23 15-03-54](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/36a4964c-b2e0-462f-b60b-c6ba182a28af)
 
+### 자세한 개념 설명은 ela.ipynb 파일을 통해 업로드 예정.
+
 ### App server 에서 발생하는 Event stream 을 kafka 에 logging
 
 ### ELK 를 활용해 kafka 에서 Server 의 Event stream log 를 가져오고 처리 / 분석 / 저장.
