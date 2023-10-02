@@ -37,7 +37,7 @@ def answer_create(request, question_id):
                 'status' : 'Success'
             }    
             logger.debug(json.dumps(success_create_A))
-            producer.send(KAFKA_TOPIC, value = json.dumps(success_create_A))
+            producer.send(KAFKA_TOPIC + '_create_a', value = json.dumps(success_create_A))
             producer.flush()        
             return redirect('{}#answer_{}'.format(
                 resolve_url('pybo:detail', question_id = question.id), answer.id))
@@ -73,13 +73,13 @@ def answer_modify(request, answer_id):
                 'status' : 'Success'
             }    
             logger.debug(json.dumps(success_modify_A))
-            producer.send(KAFKA_TOPIC, value = json.dumps(success_modify_A))
+            producer.send(KAFKA_TOPIC + '_modify_a', value = json.dumps(success_modify_A))
             producer.flush()  
             return redirect('{}#answer_{}'.format(
-                resolve_url('pybo:detail', question_id=answer.question.id), answer.id))
+                resolve_url('pybo:detail', question_id = answer.question.id), answer.id))
         
     else:
-        form = AnswerForm(instance=answer)
+        form = AnswerForm(instance = answer)
     
     context = {'answer': answer, 'form': form}
     return render(request, 'pybo/answer_form.html', context)
@@ -103,7 +103,7 @@ def answer_delete(request, answer_id):
                 'status' : 'Success'
             }    
         logger.debug(json.dumps(success_delete_A))
-        producer.send(KAFKA_TOPIC, value = json.dumps(success_delete_A))
+        producer.send(KAFKA_TOPIC + '_delete_a', value = json.dumps(success_delete_A))
         producer.flush()          
     return redirect('pybo:detail', question_id=answer.question.id)
 
@@ -125,7 +125,7 @@ def answer_vote(request, answer_id):
                 'status' : 'Success'
             }    
         logger.debug(json.dumps(success_vote_A))
-        producer.send(KAFKA_TOPIC, value = json.dumps(success_vote_A))
+        producer.send(KAFKA_TOPIC + '_voter_a', value = json.dumps(success_vote_A))
         producer.flush()         
     return redirect('{}#answer_{}'.format(
-                resolve_url('pybo:detail', question_id=answer.question.id), answer.id))
+                resolve_url('pybo:detail', question_id = answer.question.id), answer.id))

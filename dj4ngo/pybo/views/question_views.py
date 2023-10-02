@@ -42,7 +42,7 @@ def question_create(request):
         'status' : 'Success'
     }    
     logger.debug(json.dumps(success_create_Q))
-    producer.send(KAFKA_TOPIC, value = json.dumps(success_create_Q))
+    producer.send(KAFKA_TOPIC + '_create_q', value = json.dumps(success_create_Q))
     producer.flush()    
     return render(request, 'pybo/question_form.html', context)
 
@@ -72,7 +72,7 @@ def question_modify(request, question_id):
                 'status' : 'Success'
             }    
             logger.debug(json.dumps(success_modify_Q))
-            producer.send(KAFKA_TOPIC, value = json.dumps(success_modify_Q))
+            producer.send(KAFKA_TOPIC + '_modify_q', value = json.dumps(success_modify_Q))
             producer.flush()       
 
             return redirect('pybo:detail', question_id = question.id)
@@ -102,7 +102,7 @@ def question_delete(request, question_id):
     }    
 
     logger.debug(json.dumps(success_modify_Q))
-    producer.send(KAFKA_TOPIC, value = json.dumps(success_modify_Q))
+    producer.send(KAFKA_TOPIC + '_delete_q', value = json.dumps(success_modify_Q))
     producer.flush()        
     return redirect('pybo:index')
 
@@ -124,6 +124,6 @@ def question_vote(request, question_id):
             'status' : 'Success'
         }    
         logger.debug(json.dumps(success_vote_Q))
-        producer.send(KAFKA_TOPIC, value = json.dumps(success_vote_Q))
+        producer.send(KAFKA_TOPIC + '_voter_q', value = json.dumps(success_vote_Q))
         producer.flush()               
     return redirect('pybo:detail', question_id = question.id)

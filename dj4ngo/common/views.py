@@ -24,20 +24,20 @@ def signup(request):
             if user is not None:
                 login(request, user)
                 success_signup_log = {'log_level' : 'info', 
-                                      'category' : 'signup',
+                                      'category' : 'sign_up',
                                       'time' : current_time,
                                       'method' : 'POST',
                                       'username': username,
                                       'email' : email,
                                       'status' : 'Success'}                    
-                logger.debug(success_signup_log)
+                logger.debug(json.dumps(success_signup_log))
                 producer.send(KAFKA_TOPIC, value = success_signup_log)
                 producer.flush()
                 return redirect('index')
 
             else:
                 fail_signup_log = {'log_level' : 'info', 
-                                   'category' : 'signup',
+                                   'category' : 'sign_up',
                                    'time' : current_time,
                                    'method' : 'POST',
                                    'status' : 'Success'}  
