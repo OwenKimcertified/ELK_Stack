@@ -34,13 +34,13 @@ __workflow__
 
 1. server log 를 Queue(kafka with zookeeper)
 
-2. kafka 에 저장된 message를 logstash(indexing)[logstash.conf] 로
+2. kafka 에 저장된 message를 logstash(인덱싱)[logstash.conf] 로
 
 3. logstash -> elasticsearch 에 stack
 
 4. kibana (dashboard) 로 확인
 
-만약 서버가 커져서 트래픽이 많아지고 서버를 늘림과 동시에 logstash 로 보내는 logfile 들이 많아져 과부화 발생.
+만약 서버가 커져서 트래픽이 많아지고 서버를 늘림과 동시에 logstash 로 보내는 logfile 이 많아져 과부화 발생.
 
 ㄴ n * server = n * log
 
@@ -143,6 +143,13 @@ docker network connect <network-name> <img_id>
 
 이게 싫으면 한 개의 docker-compose.yml 에 모아서 compose up 해도 되지만 권장하지 않음.
 
+4. 각종 logstash 오류들
+
+not eligible, 401(authorization) ... etc 
+
+공식 문서를 활용  
+### [ELK stack 공식문서](https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html)
+
 # Schedule
 
 2023 / 09 / 26 ~ 09 / 30 < 연장 10 / 02 >
@@ -155,7 +162,13 @@ docker network connect <network-name> <img_id>
 
 - [X] <mark>Kafka(server log) - Logstash server log 연동 </mark>
 
-- [X] 로깅 파일 indecies 하고 대시보드화
+- [X] index mapping
+
+2023 / 10 / 02 ~ 10 / 03
+
+- [ ] NoSQL (mongoDB) 에 log stack. ( airflow 로 scheduling) 
+
+- [ ] 
 ```python
 docker-elk-main-logstash-1       | [2023-09-30T15:55:30,330][INFO ][org.apache.kafka.clients.consumer.KafkaConsumer][main][0fd99696a92c968bccc1713a676feaca61f52661b8896582adbf98c1fe4f8371] [Consumer clientId=logstash-0, groupId=logstash] Subscribed to topic(s): django_SERVER_LOGS_create_account, django_SERVER_LOGS_question, django_SERVER_LOGS_answer
 
