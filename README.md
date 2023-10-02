@@ -173,17 +173,17 @@ To https://github.com/OwenKimcertified/ELK_Stack.git
 ```
 3. docker 에서 elk, kafka 연동 시 네트워크 통신 문제 ★
 
-만약 kafka 에 해당하는 docker-compose.yml 파일을 compose up 하고
+ㄴ 만약 kafka 에 해당하는 docker-compose.yml 파일을 compose up 하고
 
-ELK 에 해당하는 docker-compose.yml 파일을 compose up 했다면 
+ㄴ ELK 에 해당하는 docker-compose.yml 파일을 compose up 했다면 
 
-도커의 컨테이너는 기본적으로 격리되어 있어 서로 통신할 수 없다. 
+ㄴ 도커의 컨테이너는 기본적으로 격리되어 있어 서로 통신할 수 없다. 
 
-따라서 새로운 네트워크를 생성하고 통신시킬 컨테이너들을 모아야한다. 
+ㄴ 따라서 새로운 네트워크를 생성하고 통신시킬 컨테이너들을 모아야한다. 
 
-docker network connect <network-name> <img_id>
+ㄴ docker network connect <network-name> <img_id>
 
-이게 싫으면 한 개의 docker-compose.yml 에 모아서 compose up 해도 되지만 권장하지 않음.
+ㄴ 이게 싫으면 한 개의 docker-compose.yml 에 모아서 compose up 해도 되지만 권장하지 않음.
 
 4. 각종 logstash 오류들
 
@@ -194,14 +194,17 @@ not eligible, 401(authorization) ... etc
 
 5. Scale out 시 문제 
 
-만약 서버가 커져서 트래픽이 많아지고 서버를 늘림과 동시에 logstash 로 보내는 logfile 이 많아져 과부화 발생.
+만약 서버가 커져서 트래픽이 많아져 서버를 늘리면 logstash 로 보내는 log 가 많아져 과부화 발생.
 
-ㄴ n * server = n * log
+ㄴ n * server = n * log 
 
-Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리 하기 어려워짐. (ssh login 으로 하나하나 확인해야함)
+ㄴ 해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장.
 
-해결책으로 kafka 를 활용해 FT(장애허용), HA(고 가용성) 보장.
-
-kafka 에 SERVER LOG 들을 구분하고 해당하는 topic 들을 생성. 
+ㄴ kafka 에 SERVER LOG 들을 구분하고 해당하는 topic 들을 생성. 
 
 서버가 늘어나도 SERVER.log 는 logstash 로 일괄 관리.
+
+Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리가 매우 힘들어짐. (ssh login 으로 하나 하나 확인해야함)
+
+ㄴ logstash 로 일괄 관리함
+
