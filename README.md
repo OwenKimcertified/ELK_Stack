@@ -77,7 +77,7 @@ Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 
 
 ㄴ 검색, 분석 성능 강화. 서버가 커지면 ES config 를 수정해서 클러스터 구성을 조절하기.
 
-## 2023 / 10 / 02 ~ 10 / 03
+## additional
 
 - [ ] airflow 로 scheduling  
 
