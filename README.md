@@ -33,9 +33,9 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 2. kafka 에 저장된 message를 logstash index mapping
 
-3. kibana (dashboard) 로 확인
+3. 날짜별 event log 를 NoSQL(ES) 에 stack -> 스키마를 재정의 후 DW(MySQL) 에 load
 
-4. 날짜별 event log 를 NoSQL(MongoDB) 에 stack -> 스키마를 재정의 후 DW 에 load
+4. kibana (dashboard) 로 확인
 
 # Schedule
 
@@ -79,7 +79,7 @@ Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 
 
 ## 2023 / 10 / 02 ~ 10 / 03
 
-- [ ] NoSQL (mongoDB) 에 log stack. ( airflow 로 scheduling) 
+- [ ] airflow 로 scheduling  
 
 - [ ] 할 일 탐색 중
 
