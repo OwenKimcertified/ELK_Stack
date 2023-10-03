@@ -96,6 +96,7 @@ swagger.json 으로 load 가능.
 
 Web 구성은 basic 글,댓글 쓰기, 수정 삭제, 추천, 페이징
 
+ㄴ 각 category 에 대한 Event stream 을 kafka topic 에 logging
 # ISSUE LIST
 
 1. makemigrations 시 권한 오류 해결 (ubuntu 에서 git clone 시 잠김 폴더로 된 경우,chmod -R +w 로 해결 안됨)
