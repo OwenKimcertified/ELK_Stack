@@ -51,8 +51,27 @@ kafka broker 의 status, topic 별 message 를 GUI로 확인.
 ![스크린샷 2023-09-30 00-29-15](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/6023ef98-4b49-4a15-8872-9636b35b68d5)
 
 - [X] <mark>Kafka(server log) - Logstash server log 연동 </mark>
+```python
+Kafka 관련
+
+kafka1                 | [2023-10-04 18:33:44,318] TRACE [Broker id=1] Cached leader info UpdateMetadataPartitionState(topicName='django_SERVER_LOGS_question_delete_q', partitionIndex=0, controllerEpoch=74, leader=3, leaderEpoch=12, isr=[3], zkVersion=12, replicas=[3], offlineReplicas=[]) for partition django_SERVER_LOGS_question_delete_q-0 in response to UpdateMetadata request sent by controller 3 epoch 74 with correlation id 3 (state.change.logger)
+
+.
+.
+.
+kafka3                 | [2023-10-04 18:33:49,232] INFO [Controller id=3] Processing automatic preferred replica leader election (kafka.controller.KafkaController)
+.
+.
+.
+kafka3                 | [2023-10-04 18:33:49,243] DEBUG [Controller id=3] Topics not in preferred replica for broker 3 HashMap() (kafka.controller.KafkaController)
+kafka3                 | [2023-10-04 18:33:49,243] TRACE [Controller id=3] Leader imbalance ratio for broker 3 is 0.0 (kafka.controller.KafkaController)
+kafka2                 | [2023-10-04 18:34:18,298] INFO [GroupCoordinator 2]: Dynamic member with unknown member id joins group logstash in Empty state. Created a new member id logstash-0-3557231f-a526-4b40-9d93-1c69cb880a90 and request the member to rejoin with this id. (kafka.coordinator.group.GroupCoordinator)
+```
+ㄴ Zookeeper 가 Leader, Follower 를 선출하고 파티션 상태를 update, logstash 그룹에 kafka 코디네이터가 가입.
 
 ```python
+ELK 관련
+
 docker-elk-main-logstash-1       | [2023-09-30T15:55:30,330][INFO ][org.apache.kafka.clients.consumer.KafkaConsumer][main][0fd99696a92c968bccc1713a676feaca61f52661b8896582adbf98c1fe4f8371] [Consumer clientId=logstash-0, groupId=logstash] Subscribed to topic(s): django_SERVER_LOGS_create_account, django_SERVER_LOGS_question, django_SERVER_LOGS_answer
 
 .....
