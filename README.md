@@ -81,6 +81,8 @@ Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 
 
 - [ ] airflow 로 scheduling  
 
+- [ ] 멀티 파이프라인 
+
 - [ ] 할 일 탐색 중
 
 # Postman (api check)
