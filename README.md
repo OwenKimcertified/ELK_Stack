@@ -66,10 +66,10 @@ docker-elk-main-logstash-1       | [2023-09-30T16:11:49,168][ERROR][logstash.cod
 
 - [X] index mapping
 
-kafka 에서 받아온 message 를 index mapping 
-![스크린샷 2023-10-02 02-13-00](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/02f53511-1099-4550-ac8f-84cda138a8b8)
+kafka 에서 받아온 message 를 index 에 mapping 
+![스크린샷 2023-10-05 03-36-24](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/8c66c3f1-3159-4285-9dde-f223a9189b95)
 
-대시보드화 가능. 
+대시보드 기능 
 
 logstash 파이프라인을 통해 처리된 Event stream 은 ES 로 가기 전 샤딩.
 
