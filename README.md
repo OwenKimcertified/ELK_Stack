@@ -37,7 +37,8 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 4. NoSQL(ES) 에 stack 된 날짜별 log 들을 스키마를 재정의 후 DW(MySQL) 에 저장(AWS s3, RDS 에 가능)
 
-![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/051c87d8-8db5-4d08-ab32-3cd92465f51d)
+![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/268d5621-4a5c-410e-82b3-dc191fbf9243)
+
 
 
 # Schedule
