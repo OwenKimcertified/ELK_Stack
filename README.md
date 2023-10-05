@@ -29,13 +29,13 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 ㄴ docker network connect 활용
 
-1. server log 를 Queue(kafka with zookeeper)
+1. Web 에서 발생하는 Event Stream 에 대해서 카테고리 별로 kafka topic 에 저장
 
 2. kafka 에 저장된 message를 logstash index mapping
 
-3. 날짜별 event log 를 NoSQL(ES) 에 stack -> 스키마를 재정의 후 DW(MySQL) 에 load
+3. kibana (dashboard) 로 확인
 
-4. kibana (dashboard) 로 확인
+4. NoSQL(ES) 에 stack 된 날짜별 log 들을 스키마를 재정의 후 DW(MySQL) 에 load(AWS s3, RDS 에 가능)
 
 # Schedule
 
