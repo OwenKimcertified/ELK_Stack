@@ -67,8 +67,9 @@ kafka3                 | [2023-10-04 18:33:49,243] DEBUG [Controller id=3] Topic
 kafka3                 | [2023-10-04 18:33:49,243] TRACE [Controller id=3] Leader imbalance ratio for broker 3 is 0.0 (kafka.controller.KafkaController)
 kafka2                 | [2023-10-04 18:34:18,298] INFO [GroupCoordinator 2]: Dynamic member with unknown member id joins group logstash in Empty state. Created a new member id logstash-0-3557231f-a526-4b40-9d93-1c69cb880a90 and request the member to rejoin with this id. (kafka.coordinator.group.GroupCoordinator)
 ```
-ㄴ Zookeeper 가 Leader, Follower 를 선출하고 파티션 상태를 update, logstash 그룹에 kafka 코디네이터가 가입.
+ㄴ Zookeeper 가 Leader, Follower 를 지정하고 파티션 상태를 update, logstash 그룹에 kafka 코디네이터가 가입.
 
+ㄴ error, warnning 에 대해서 터미널에 표시, kafka controller 가 레플리카, 
 ```python
 ELK 관련
 
