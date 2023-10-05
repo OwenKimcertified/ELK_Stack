@@ -37,7 +37,8 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 4. NoSQL(ES) 에 stack 된 날짜별 log 들을 스키마를 재정의 후 DW(Apache-Hive) 에 저장.
 
-![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/91cdf26e-836c-4361-9038-6e5a613a90c8)
+![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/73c54382-d80b-40e2-a2d0-d00d3da0042d)
+
 
 
 
