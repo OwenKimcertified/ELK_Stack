@@ -68,8 +68,14 @@ kafka3                 | [2023-10-04 18:33:49,243] TRACE [Controller id=3] Leade
 kafka2                 | [2023-10-04 18:34:18,298] INFO [GroupCoordinator 2]: Dynamic member with unknown member id joins group logstash in Empty state. Created a new member id logstash-0-3557231f-a526-4b40-9d93-1c69cb880a90 and request the member to rejoin with this id. (kafka.coordinator.group.GroupCoordinator)
 ```
 ㄴ Zookeeper 가 Leader, Follower 를 지정하고 파티션 상태를 update, logstash 그룹에 kafka 코디네이터가 가입.
-
-ㄴ error, warnning 에 대해서 터미널에 표시, kafka controller 가 레플리카, 
+```python
+kafka2                 | [2023-10-05 13:08:29,602] INFO [GroupCoordinator 2]: Dynamic member with unknown member id joins group logstash in Empty state. Created a new member id logstash-0-428700bf-9673-4251-912a-8abd67649bff and request the member to rejoin with this id. (kafka.coordinator.group.GroupCoordinator)
+kafka2                 | [2023-10-05 13:08:29,606] INFO [GroupCoordinator 2]: Preparing to rebalance group logstash in state PreparingRebalance with old generation 38 (__consumer_offsets-49) (reason: Adding new member logstash-0-428700bf-9673-4251-912a-8abd67649bff with group instance id None) (kafka.coordinator.group.GroupCoordinator)
+kafka2                 | [2023-10-05 13:08:32,608] INFO [GroupCoordinator 2]: Stabilized group logstash generation 39 (__consumer_offsets-49) with 1 members (kafka.coordinator.group.GroupCoordinator)
+kafka2                 | [2023-10-05 13:08:32,621] INFO [GroupCoordinator 2]: Assignment received from leader logstash-0-428700bf-9673-4251-912a-8abd67649bff for group logstash for generation 39. The group has 1 members, 0 of which are static. (kafka.coordinator.group.GroupCoordinator)
+```
+ㄴ logstash 그룹에 가입, 그룹 안정화, leader 가 follower 들에게 할당량 배포
+ 
 ```python
 ELK 관련
 
