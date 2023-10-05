@@ -98,9 +98,9 @@ Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 
 
 ## additional
 
-- [ ] airflow 로 scheduling  
+- [X] multiple pipelines.
 
-- [ ] 멀티 파이프라인 
+- [ ] airflow 로 scheduling    
 
 - [ ] 할 일 탐색 중
 
@@ -230,3 +230,14 @@ Auto Scaling 시 모든 서버 인스턴스의 로그 파일을 추적/관리가
 
 ㄴ logstash 로 일괄 관리함
 
+6. multiple pipelines 관련
+
+docker file, yml volume 에 pipelines.yml 추가. 경로는 logstash.yml 과 동일하게 수정
+
+```python
+config
+ㄴ logstash.yml, pipelines.yml
+
+pipeline
+ㄴ account.conf, question.conf ....etc config file 
+```
