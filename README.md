@@ -41,7 +41,9 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 ㄴ hive 말고 databricks, snowflake, bigquery 등을 쓰는 것이 바람직함.
 
-![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/939bff87-f690-401a-947e-e5fc2f5f3b30)
+ㄴ hive 에서 bigquery 로 변경
+![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/631cafe6-0b3c-4b65-b81c-a8a9c1fd97d2)
+
 
 
 
