@@ -263,3 +263,5 @@ for 과 transactional 사이의 특수수문자를 제거
 pipeline
 ㄴ account.conf, question.conf ....etc config file 
 ```
+
+$HIVE_HOME/bin/hive run
