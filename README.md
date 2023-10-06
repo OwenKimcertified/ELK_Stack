@@ -257,6 +257,8 @@ hive-default.xml.template 을 cp 해서 config 를 수정했을 때 3215 번에 
 
 for 과 transactional 사이의 특수수문자를 제거
 
+혹시 자바의 버전이 2개 설치되어 있다면 한 개를 제거해야 충돌이 발생하지 않음.
+
 pipeline
 ㄴ account.conf, question.conf ....etc config file 
 ```
