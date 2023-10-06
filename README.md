@@ -251,6 +251,12 @@ docker file, yml volume 에 pipelines.yml 추가. 경로는 logstash.yml 과 동
 config
 ㄴ logstash.yml, pipelines.yml
 
+7. Apache-Hive 설치시 hive-site.xml 문제 
+
+hive-default.xml.template 을 cp 해서 config 를 수정했을 때 3215 번에 이상한 특수문자가 섞여있음 for ~ transactional table 
+
+for 과 transactional 사이의 특수수문자를 제거
+
 pipeline
 ㄴ account.conf, question.conf ....etc config file 
 ```
