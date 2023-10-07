@@ -41,13 +41,16 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 4. NoSQL(ES) 에 stack 된 날짜별 log 들을 스키마를 재정의 후 DW(Apache-Hive) 에 저장. <수정: Hive -> bigquery>
 
-ㄴpyhive, pyhs2... 등등 python 과 hive 를 연결하기 위한 라이브러리들의 개발이 늦고 개발자들이 포기한 경우가 많음.
+   ES : 실시간 모니터링, BigQuery : 배치 처리 모니터링 ( airflow 를 통해 매일 오전 6 : 00 배치 처리됨.
 
-ㄴ hive 말고 databricks, snowflake, bigquery 등을 쓰는 것이 바람직함.
+Hive 대신 BigQuery 로 바꾼 이유
 
-ㄴ hive 에서 bigquery 로 변경
+ㄴ pyhive, pyhs2... 등등 python 과 hive 를 연결하기 위한 라이브러리들의 개발이 늦고 개발자들이 포기한 경우가 많음.
 
-ㄴ 매일 아침 6 시에 ES 에 저장된 전 날의 데이터가 저장됨.
+ㄴ pyhive 는 호환성이 많이 떨어지는 듯. python 의 경우 hive 말고 bigquery, databricks, snowflake 등을 쓰는 것이 바람직함.
+
+
+
 ![스크린샷 2023-10-07 18-59-53](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/5aa2c05e-e4ab-4e99-a9c4-75b4a44eb86b)
 
 
