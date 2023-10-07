@@ -38,7 +38,7 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 3. kibana (dashboard) 로 확인
 
-4. NoSQL(ES) 에 stack 된 날짜별 log 들을 스키마를 재정의 후 DW(Apache-Hive) 에 저장.
+4. NoSQL(ES) 에 stack 된 날짜별 log 들을 스키마를 재정의 후 DW(Apache-Hive) 에 저장. <수정: Hive -> bigquery>
 
 ㄴpyhive, pyhs2... 등등 python 과 hive 를 연결하기 위한 라이브러리들의 개발이 늦고 개발자들이 포기한 경우가 많음.
 
