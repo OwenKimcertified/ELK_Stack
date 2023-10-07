@@ -42,6 +42,11 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 ㄴ hive 말고 databricks, snowflake, bigquery 등을 쓰는 것이 바람직함.
 
 ㄴ hive 에서 bigquery 로 변경
+
+ㄴ 매일 아침 6 시에 ES 에 저장된 전 날의 데이터가 저장됨.
+![스크린샷 2023-10-07 18-59-53](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/5aa2c05e-e4ab-4e99-a9c4-75b4a44eb86b)
+
+
 ![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/60aa866b-6021-440c-9c36-ea5fb5de8f0b)
 
 
