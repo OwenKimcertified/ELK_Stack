@@ -126,7 +126,7 @@ Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 
 
 - [X] multiple pipelines.
 
-- [ ] airflow 로 scheduling    
+- [X] airflow 로 scheduling    
 
 - [ ] 할 일 탐색 중
 
