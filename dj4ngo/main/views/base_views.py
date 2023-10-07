@@ -2,8 +2,8 @@ from django.core.paginator import Paginator
 from django.shortcuts import render, get_object_or_404
 from django.db.models import Q
 from ..models import Question
-
 import logging
+
 logger = logging.getLogger('main_logger')
 
 def index(request):

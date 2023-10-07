@@ -160,7 +160,7 @@ LOGGING = {
             'filters': ['require_debug_false'],
             'class': 'django.utils.log.AdminEmailHandler'
         },
-        'logging_file': {
+        'file': {
             'level': 'DEBUG',
             'filters': ['require_debug_false'],
             'class': 'logging.handlers.RotatingFileHandler',
@@ -172,7 +172,7 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers': ['console', 'mail_admins', 'logging_file'],
+            'handlers': ['console', 'mail_admins', 'file'],
             'level': 'INFO',
         },
         'django.server': {
@@ -181,7 +181,7 @@ LOGGING = {
             'propagate': False,
         },
         'main_logger': {
-            'handlers': ['console', 'logging_file'],
+            'handlers': ['console', 'file'],
             'level': 'INFO',
         },        
     }
