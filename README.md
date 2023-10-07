@@ -29,7 +29,6 @@ docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-
 
 Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
-ㄴ docker network connect 활용
 
 ![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/60aa866b-6021-440c-9c36-ea5fb5de8f0b)
 
