@@ -272,3 +272,33 @@ pipeline
 ```
 
 $HIVE_HOME/bin/hive run
+
+8. python - bigquery 연동 관련 
+
+google-cloud-sdk 설치. 
+
+pip install google-cloud-bigquery
+
+sdk 를 다운 받고 그 폴더에서 스크립트 실행
+
+지금의 폴더 디렉토리를 생각하며 cli 작성 ./ or ../google-cloud-sdk/install.sh
+
+authorization
+
+/google-cloud-sdk/gcloud auth login 
+
+/google-cloud-sdk/gcloud config set project <project_id>
+
+인증 문제 시 
+
+/google-cloud-sdk/gcloud auth application-default set-quota-project <project_id>
+
+초기화 
+
+/google-cloud-sdk/bin/gcloud init
+
+정상적으로 진행 완료 시 
+
+홈 디렉토리에 .config 숨김 폴더가 생성, .config/gcloud/application_default~.json 파일 생성
+
+application_default~.json 를 cat 시 프로젝트, 클라이언트, 토큰, 권한 등을 확인
