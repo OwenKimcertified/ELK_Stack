@@ -29,6 +29,9 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 ㄴ docker network connect 활용
 
+![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/60aa866b-6021-440c-9c36-ea5fb5de8f0b)
+
+
 1. Web 에서 발생하는 Event Stream 에 대해서 카테고리 별로 kafka topic 에 저장
 
 2. kafka 에 저장된 message를 logstash index mapping
@@ -45,9 +48,6 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 ㄴ 매일 아침 6 시에 ES 에 저장된 전 날의 데이터가 저장됨.
 ![스크린샷 2023-10-07 18-59-53](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/5aa2c05e-e4ab-4e99-a9c4-75b4a44eb86b)
-
-
-![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/60aa866b-6021-440c-9c36-ea5fb5de8f0b)
 
 
 
