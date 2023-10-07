@@ -39,7 +39,7 @@ def ES_to_BQ():
 
     table = bigquery.Table(table_ref, schema = schema)
 
-    es = Elasticsearch(['http://localhost:9200'], basic_auth = ('elastic', '15987ss'))
+    es = Elasticsearch(['http://localhost:9200'], basic_auth = ('elastic', 'elastic'))
     elasticsearch_index = 'django-server-account'
 
     es_data = es.search(index = elasticsearch_index)
