@@ -128,9 +128,13 @@ Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 
 
 ## additional ~ing
 
-- [X] multiple pipelines.
+- [X] multiple pipelines. (2023 - 10 - 01)
 
-- [X] airflow 로 scheduling    
+- [X] airflow 로 scheduling (2023 - 10 - 04)   
+
+- [ ] ES 에서 BigQuery 로 Batch 처리 시 중복되는 데이터 문제 알고리즘으로 해결..? 방법 찾기.
+
+      ㄴ 기존에는 n 개의 데이터를 검색 후 날짜를 기준으로 배치 처리하는데, 데이터가 많아지면 느려짐.
 
 - [ ] 할 일 탐색 중
 
