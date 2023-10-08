@@ -41,7 +41,7 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
 4. NoSQL(ES) 에 stack 된 날짜별 log 들을 스키마를 재정의 후 DW(Apache-Hive) 에 저장. <수정: Hive -> bigquery>
 
-   ES : 실시간 모니터링, BigQuery : 배치 처리 모니터링 ( airflow 를 통해 매일 오전 6 : 00 배치 처리됨.
+   ES : 실시간 모니터링, BigQuery : 배치 처리 모니터링 ( airflow 를 통해 매일 오전 6 : 00 배치 처리됨. )
 
 Hive 대신 BigQuery 로 바꾼 이유
 
