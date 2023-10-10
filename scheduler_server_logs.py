@@ -12,15 +12,6 @@ default_args = {
     'retry_delay': timedelta(minutes = 5),
 }
 
-dag = DAG(
-    'elasticsearch_to_bigquery',
-    default_args = default_args,
-    description = 'Elasticsearch to BigQuery daily data transfer',
-    schedule_interval = timedelta(days = 1),  
-    catchup = False,
-)
-
-
 def ES_to_BQ():
     client = bigquery.Client(project='decoded-oxide-401216')
     dset = 'django_account_logs'
@@ -72,6 +63,13 @@ def ES_to_BQ():
     else:
         print('there`s no data to stack.')
 
+dag = DAG(
+    'elasticsearch_to_bigquery',
+    default_args = default_args,
+    description = 'Elasticsearch to BigQuery daily data transfer',
+    schedule_interval = timedelta(days = 1),  
+    catchup = False,
+)
 
 Es_data_to_BQ = PythonOperator(
     task_id = 'ES_to_BQ',
