@@ -27,10 +27,11 @@ docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-
 
 # __workflow__ 
 
-Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
+Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack], BigQuery, airflow
 
 
-![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/60aa866b-6021-440c-9c36-ea5fb5de8f0b)
+![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/7c11b52c-c780-433a-b4fc-fc5c49f4e334)
+
 
 
 1. Web 에서 발생하는 Event Stream 에 대해서 카테고리 별로 kafka topic 에 저장
@@ -43,22 +44,13 @@ Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack]
 
    ES : 실시간 모니터링, BigQuery : 배치 처리 모니터링 ( airflow 를 통해 매일 오전 6 : 00 배치 처리됨. )
 
-Hive 대신 BigQuery 로 바꾼 이유
+### 변경 사항
+
+   Hive 대신 BigQuery 로 바꾼 이유
 
 ㄴ pyhive, pyhs2... 등등 python 과 hive 를 연결하기 위한 라이브러리들의 개발이 늦고 개발자들이 포기한 경우가 많음.
 
 ㄴ pyhive 는 호환성이 많이 떨어지는 듯. python 의 경우 hive 말고 bigquery, databricks, snowflake 등을 쓰는 것이 바람직함.
-
-
-
-![스크린샷 2023-10-07 18-59-53](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/5aa2c05e-e4ab-4e99-a9c4-75b4a44eb86b)
-
-
-
-
-
-
-
 
 # Schedule
 
@@ -125,6 +117,11 @@ logstash 파이프라인을 통해 처리된 Event stream 은 ES 로 가기 전 
 Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 활용해 분산 / 병렬 처리함.
 
 ㄴ 검색, 분석 성능 강화. 서버가 커지면 ES config 를 수정해서 클러스터 구성을 조절하기.
+
+Airflow 를 활용한 DW(BigQuery) 로 데이터 배치처리.
+ㄴ 모니터링이 아닌 데이터 분석을 위한 환경을 위해 DW 사용
+
+![스크린샷 2023-10-07 18-59-53](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/5aa2c05e-e4ab-4e99-a9c4-75b4a44eb86b)
 
 ## additional ~ing
 
