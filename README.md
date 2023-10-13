@@ -119,6 +119,7 @@ Event stream 을 여러 샤드 노드로 분할 저장. ES 는 샤드 노드를 
 ㄴ 검색, 분석 성능 강화. 서버가 커지면 ES config 를 수정해서 클러스터 구성을 조절하기.
 
 Airflow 를 활용한 DW(BigQuery) 로 데이터 배치처리.
+
 ㄴ 모니터링이 아닌 데이터 분석을 위한 환경을 위해 DW 사용
 
 ![스크린샷 2023-10-07 18-59-53](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/5aa2c05e-e4ab-4e99-a9c4-75b4a44eb86b)
