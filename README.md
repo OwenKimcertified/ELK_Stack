@@ -13,7 +13,7 @@
 
 # __workflow__ 
 
-Docker : [Zookeeper, kafka(confluent), kafdrop, ELK Stack], BigQuery, airflow
+Docker : [Zookeeper, Kafka(confluent), Kafdrop, ELK Stack], BigQuery, Airflow
 
 
 ![image](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/7c11b52c-c780-433a-b4fc-fc5c49f4e334)
