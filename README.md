@@ -3,9 +3,11 @@
 
 목차
 
-1. [Schedule](#Schedule)
+1. [Workflow](#workflow)
 
-2. [Issue_List](#ISSUELIST)
+2. [Schedule](#Schedule)
+
+3. [Issue_List](#ISSUELIST)
 
 # __workflow__ 
 
