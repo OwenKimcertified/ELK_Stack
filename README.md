@@ -1,5 +1,6 @@
 ## How to handle Event Stream ?
-2023 - 09 - 26 ~ ing
+1 차 : 2023 - 09 - 26 ~ 10 - 04 
+2 차 : 2023 - 10 - 08 ~ ing 
 
 목차
 
