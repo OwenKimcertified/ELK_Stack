@@ -1,29 +1,4 @@
-# ELK_Stack (logging)
-Elastic search, Log stash, Kibana 
-
-1. server 의 log file 을 Beat 로 저장
-
-2. server 의 log 관련 config 가 변경되었을 때 각 서버에 ssh 접속하지 않고
-
-   각 서버의 log config 들을 수정하지 않고 log stash 로 파싱. 
-
-4. elastic search 에 stack
-
-5. stack 된 data 를 kibina 에서 확인 or dashboard
-
-관련 내용들을 정리합니다. 
-
-docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-elk 에서 클론하고 내용을 보며 설치.
-
-![스크린샷 2023-09-23 15-03-54](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/36a4964c-b2e0-462f-b60b-c6ba182a28af)
-
-### 자세한 개념 설명은 ELK_explain.ipynb 파일을 통해 업로드 예정.
-
-ㄴ 업로드 완료.
-
-### App server 에서 발생하는 Event stream 을 kafka 에 logging
-
-### ELK 를 활용해 kafka 에서 Server 의 Event stream log 를 가져오고 처리 / 분석 / 저장.
+## How to handle Event Stream ?
 
 # __workflow__ 
 
@@ -311,3 +286,30 @@ authorization
 홈 디렉토리에 .config 숨김 폴더가 생성, .config/gcloud/application_default~.json 파일 생성
 
 application_default~.json 를 cat 시 프로젝트, 클라이언트, 토큰, 권한 등을 확인
+
+# ELK Basic
+Elastic search, Log stash, Kibana 
+
+1. server 의 log file 을 Beat 로 저장
+
+2. server 의 log 관련 config 가 변경되었을 때 각 서버에 ssh 접속하지 않고
+
+   각 서버의 log config 들을 수정하지 않고 log stash 로 파싱. 
+
+4. elastic search 에 stack
+
+5. stack 된 data 를 kibina 에서 확인 or dashboard
+
+관련 내용들을 정리합니다. 
+
+docker 환경에서 진행하며 설치는 https://github.com/deviantony/docker-elk 에서 클론하고 내용을 보며 설치.
+
+![스크린샷 2023-09-23 15-03-54](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/36a4964c-b2e0-462f-b60b-c6ba182a28af)
+
+### 자세한 개념 설명은 ELK_explain.ipynb 파일을 통해 업로드 예정.
+
+ㄴ 업로드 완료.
+
+### App server 에서 발생하는 Event stream 을 kafka 에 logging
+
+### ELK 를 활용해 kafka 에서 Server 의 Event stream log 를 가져오고 처리 / 분석 / 저장.
