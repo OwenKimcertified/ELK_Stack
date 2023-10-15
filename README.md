@@ -9,7 +9,7 @@
 
 2. [Schedule](#Schedule)
 
-3. [additional](##additional-~ing)
+3. [additional](#additional-~ing)
 
 3. [Issue-List](#ISSUE-LIST)
 
