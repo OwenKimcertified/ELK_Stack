@@ -9,7 +9,7 @@
 
 2. [Schedule](#Schedule)
 
-3. [additional](#additional-~ing)
+3. [additional](#additional)
 
 3. [Issue-List](#ISSUE-LIST)
 
@@ -112,7 +112,7 @@ Airflow 를 활용한 DW(BigQuery) 로 데이터 배치처리.
 
 ![스크린샷 2023-10-07 18-59-53](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/5aa2c05e-e4ab-4e99-a9c4-75b4a44eb86b)
 
-## additional ~ing
+## additional
 
 - [X] multiple pipelines. (2023 - 10 - 01)
 
