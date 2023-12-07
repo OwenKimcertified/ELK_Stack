@@ -32,19 +32,12 @@ Docker : [Zookeeper, Kafka(confluent), Kafdrop, ELK Stack], BigQuery, Airflow
 
    ES : 실시간 모니터링, BigQuery : 배치 처리 모니터링 ( airflow 를 통해 매일 오전 6 : 00 배치 처리됨. )
 
-### 변경 사항
-
-   Hive 대신 BigQuery 로 바꾼 이유
-
-ㄴ pyhive, pyhs2... 등등 python 과 hive 를 연결하기 위한 라이브러리들의 개발이 늦고 개발자들이 포기한 경우가 많음.
-
-ㄴ pyhive 는 호환성이 많이 떨어지는 듯. python 의 경우 hive 말고 bigquery, databricks, snowflake 등을 쓰는 것이 바람직함.
 
 # Schedule
 
 ## 2023 / 09 / 26 ~ 10 / 02
 
-~~ELK docker image 경량화~~
+~~ELK docker image 경량화~~ 
 
 - [X] django restAPI 기능 구현 (basic, logging) 
 
