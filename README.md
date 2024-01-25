@@ -109,6 +109,8 @@ Airflow 를 활용한 DW(BigQuery) 로 데이터 배치처리.
 
 - [X] multiple pipelines. (2023 - 10 - 01)
 
+pipeline.yml 수정 후 config 파일 추가.
+
 - [X] airflow 로 scheduling (2023 - 10 - 04)   
 
 - [ ] 2023 - 10 - 07 아이디어 기록.  
