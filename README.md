@@ -110,8 +110,11 @@ Airflow 를 활용한 DW(BigQuery) 로 데이터 배치처리.
 - [X] multiple pipelines. (2023 - 10 - 01)
 
 pipeline.yml 수정 후 config 파일 추가.
+![스크린샷 2024-01-25 13-08-25](https://github.com/OwenKimcertified/ELK_Stack/assets/99598620/f74acd08-1da2-48a7-9c22-8859d48f4987)
 
-- [X] airflow 로 scheduling (2023 - 10 - 04)   
+- [X] airflow 로 scheduling (2023 - 10 - 04)
+
+- [ ] cron 으로 일, 주, 월 단위의 쿼리를 cron 으로 자동화. 쉘스크립트 작성
 
 - [ ] 2023 - 10 - 07 아이디어 기록.  
 1. ES 에서 BigQuery 로 Batch 처리 시 중복되는 데이터 문제 알고리즘으로 해결..? 방법 찾기.
