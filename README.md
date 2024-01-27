@@ -128,7 +128,7 @@ pipeline.yml 수정 후 config 파일 추가.
 
     ㄴ 이진 검색? 
 
-- [ ] 할 일 탐색 중
+- [x] MongoDB TTL 
 
 # Postman (api check)
 
