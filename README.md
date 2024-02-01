@@ -128,7 +128,9 @@ pipeline.yml 수정 후 config 파일 추가.
 
     ㄴ 이진 검색? 
 
-- [x] MongoDB TTL 
+- [x] MongoDB TTL
+
+- [ ] Spark + Airflow vs multi threads pandas
 
 # Postman (api check)
 
