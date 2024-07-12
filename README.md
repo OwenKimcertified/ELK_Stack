@@ -3,6 +3,8 @@
 
 2 차 : 2023 - 10 - 08 ~ ing 
 
+장고 배우기
+
 목차
 
 1. [Workflow](#workflow)
